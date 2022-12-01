@@ -1,0 +1,85 @@
+.vbox-main-button{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-background-color: #008B74;
+    -fx-border:0;
+    -fx-font-size: 20pt;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+.vbox-main-button:hover{
+    -fx-text-fill: black;
+    -fx-font-size: 20pt;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+
+
+.vbox-button{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-background-color: #008B74;
+    -fx-border:0;
+    -fx-font-size: 16pt;
+}
+.vbox-button:hover{
+    -fx-text-fill: black;
+    -fx-font-size: 16pt;
+}
+
+
+.pane-button{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-background-color: #008B74;
+    -fx-border:0;
+    -fx-font-size: 10pt;
+}
+
+.pane-delete-button{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-background-color: #c32222;
+    -fx-border:0;
+    -fx-font-size: 10pt;
+}
+
+
+.pane-close-window:hover{
+    -fx-background-color: d43434;
+}
+.pane-expand-window:hover{
+    -fx-background-color: d4d4d4;
+}
+.pane-collapse-window:hover{
+    -fx-background-color: d4d4d4;
+}
+
+
+.text-pane-header{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #008B74;
+    -fx-font-size: 20pt;
+}
+
+
+.text-additional-pane-header{
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-font-size: 20pt;
+}
+
+.modal-dialog-glass {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-insets: 12;
+    -fx-background-radius: 6;
+}
+
+.modal-dialog-content {
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-background-insets: 12;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}

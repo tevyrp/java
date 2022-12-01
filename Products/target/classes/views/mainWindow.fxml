@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1060.0" styleClass="modal-dialog-content" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <VBox layoutX="11.0" layoutY="11.0" prefHeight="777.0" prefWidth="250.0" styleClass="vbox-main-button" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="-8.0" AnchorPane.topAnchor="-8.0">
+         <children>
+            <Button fx:id="buttonMainMenu" mnemonicParsing="false" prefHeight="135.0" prefWidth="250.0" stylesheets="@../css/style.css" text="Товары в магазине" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="main-button" />
+                  <String fx:value="vbox-main-button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonProducts" mnemonicParsing="false" prefHeight="75.0" prefWidth="280.0" stylesheets="@../css/style.css" text="Продукты">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="main-button" />
+                  <String fx:value="vbox-button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonDepartments" mnemonicParsing="false" prefHeight="75.0" prefWidth="280.0" stylesheets="@../css/style.css" text="Отделы">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="main-button" />
+                  <String fx:value="vbox-button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonRequests" mnemonicParsing="false" prefHeight="75.0" prefWidth="280.0" stylesheets="@../css/style.css" text="Запросы">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="main-button" />
+                  <String fx:value="vbox-button" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="paneCloseWindow" layoutX="945.0" prefHeight="31.0" prefWidth="55.0" styleClass="pane-close-window" stylesheets="@../css/style.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="7.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/closeWindow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCollapseWindow" layoutX="930.0" layoutY="20.0" prefHeight="31.0" prefWidth="55.0" styleClass="pane-collapse-window" stylesheets="@../css/style.css" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="18.0" layoutY="7.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/collapseWindow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="productsPane" layoutX="265.0" layoutY="60.0" prefHeight="480.0" prefWidth="770.0" stylesheets="@../css/style.css" visible="false">
+         <children>
+            <Text fill="#008b74" layoutX="15.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-pane-header" text="Продукты" />
+            <TableView fx:id="tableViewProducts" layoutX="15.0" layoutY="90.0" prefHeight="330.0" prefWidth="750.0">
+              <columns>
+                <TableColumn fx:id="idProductColumn" prefWidth="126.0" text="Номер продукта" />
+                <TableColumn fx:id="idDepartmentProductColumn" prefWidth="139.0" text="Номер отдела" />
+                  <TableColumn fx:id="nameProductColumn" minWidth="0.0" prefWidth="313.0" text="Название продукта" />
+                  <TableColumn fx:id="priceProductColumn" prefWidth="171.0" text="Цена" />
+              </columns>
+            </TableView>
+            <Button fx:id="buttonToWindowAddNewProduct" layoutX="15.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Добавить новую запись" />
+         </children>
+      </Pane>
+      <Pane fx:id="departmentsPane" layoutX="265.0" layoutY="60.0" prefHeight="480.0" prefWidth="770.0" stylesheets="@../css/style.css" visible="false">
+         <children>
+            <Text fill="#008b74" layoutX="15.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-pane-header" text="Отделы" />
+            <TableView fx:id="tableViewDepartments" layoutX="15.0" layoutY="90.0" prefHeight="330.0" prefWidth="750.0">
+               <columns>
+                  <TableColumn fx:id="idDepartmentColumn" prefWidth="120.0" text="Номер отдела" />
+                  <TableColumn fx:id="nameDepartmentColumn" prefWidth="436.0" text="Название отдела" />
+                  <TableColumn fx:id="openingHoursColumn" minWidth="0.0" prefWidth="193.0" text="Часы работы" />
+               </columns>
+            </TableView>
+            <Button fx:id="buttonToWindowAddNewDepartments" layoutX="15.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Добавить новую запись" />
+         </children>
+      </Pane>
+      <Pane fx:id="requestsPane" layoutX="265.0" layoutY="60.0" prefHeight="480.0" prefWidth="770.0" stylesheets="@../css/style.css">
+         <children>
+            <Text fill="#008b74" layoutX="15.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-pane-header" text="Запросы" />
+            <TextArea fx:id="textAreaRequestResult" layoutX="15.0" layoutY="108.0" prefHeight="330.0" prefWidth="740.0" />
+            <GridPane layoutX="14.0" layoutY="65.0" prefHeight="30.0" prefWidth="740.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="119.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="629.0" minWidth="10.0" prefWidth="325.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="629.0" minWidth="10.0" prefWidth="153.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="629.0" minWidth="10.0" prefWidth="177.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="comboBoxRequests" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="374.0" styleClass="modal-dialog-glass" text="Запрос:" textAlignment="CENTER" textFill="#008b74">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelDepartment" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="181.0" styleClass="modal-dialog-glass" text="Отдел:" textAlignment="CENTER" textFill="#008b74" visible="false" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="comboBoxDepartmentsIds" prefHeight="25.0" prefWidth="197.0" visible="false" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="380.0" styleClass="modal-dialog-content" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ItemController">
+   <children>
+      <Pane layoutX="12.0" layoutY="12.0" prefHeight="105.0" prefWidth="356.0" style="-fx-background-color: #008B74; -fx-background-radius: 6;" stylesheets="@../css/style.css">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DropShadow height="10.0" radius="3.25" width="5.0" />
+         </effect>
+         <children>
+            <Pane fx:id="paneCloseWindow" layoutX="332.0" layoutY="4.0" prefHeight="20.0" prefWidth="20.0">
+               <children>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/closeWindowMini.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="paneCollapseWindow" layoutX="312.0" layoutY="4.0" prefHeight="20.0" prefWidth="20.0">
+               <children>
+                  <ImageView fitHeight="15.0" fitWidth="20.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/collapseWindowMini.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text fx:id="labelTitle" fill="WHITE" layoutX="18.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-additional-pane-header" wrappingWidth="320.0" />
+         </children>
+      </Pane>
+      <GridPane fx:id="gridPaneProduct" layoutX="30.0" layoutY="128.0" prefHeight="170.0" prefWidth="320.0" visible="false">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="212.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="110.0" text="Номер">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="118.0" text="Название" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="119.0" text="Цена" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldNameProduct" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldPriceProduct" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="25.0" prefWidth="113.0" text="Номер отдела" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldDepartmentIdProduct" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldProductId" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="buttonItemAdd" disable="true" layoutX="140.0" layoutY="346.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Добавить" visible="false" />
+      <Button fx:id="buttonClearAllFields" layoutX="237.0" layoutY="346.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="113.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Очистить поля" />
+      <Label fx:id="labelMessage" layoutX="35.0" layoutY="320.0" prefHeight="17.0" prefWidth="311.0" />
+      <Button fx:id="buttonDeleteItem" disable="true" layoutX="137.0" layoutY="346.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="93.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Удалить" visible="false" />
+      <GridPane fx:id="gridPaneDepartment" layoutX="30.0" layoutY="128.0" prefHeight="125.0" prefWidth="320.0" visible="false">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="212.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="110.0" text="Номер">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="118.0" text="Название" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="119.0" text="Часы работы" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldDepartmentId" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldNameDepartment" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textFieldOpeningHours" prefHeight="30.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="buttonEditItem" disable="true" layoutX="35.0" layoutY="346.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="93.0" styleClass="pane-button" stylesheets="@../css/style.css" text="Изменить" visible="false" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
